@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generated Questions PDF</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .question { margin-bottom: 20px; }
+        ul { margin-top: 10px; }
+        li { margin-bottom: 5px; }
+        h1 { text-align: center; margin-bottom: 40px; }
+    </style>
+</head>
+<body>
+
+    <h1>Generated Questions</h1>
+
+    {% for item in questions %}
+        <div class="question">
+            <strong>Q{{ loop.index }} ({{ item.marks }} Marks):</strong> {{ item.question }}
+            
+            {% if item.options is defined %}
+                <ul>
+                    {% for option in item.options %}
+                        <li>{{ option }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    {% endfor %}
+
+</body>
+</html>
