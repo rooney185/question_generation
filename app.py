@@ -14,7 +14,7 @@ from PIL import Image
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 app = Flask(__name__)
-app.secret_key = 'your_super_secret_key' 
+app.secret_key = '' 
 
 # Folder to store uploaded images temporarily
 UPLOAD_FOLDER = 'uploads'
