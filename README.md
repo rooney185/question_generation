@@ -1,7 +1,19 @@
 # 📘 Question Paper Generator
 
-An AI-powered **Question Paper Generator** built with **Flask**, **NLTK**, and **Tesseract OCR**.
-It allows teachers, students, and examiners to generate **subjective and objective questions** automatically from text or uploaded images, and download them as a PDF.
+An AI-powered web application that generates **subjective and objective exam questions** from text or images using **Flask, NLTK, and Tesseract OCR**. Users can customize marks distribution, create multiple-choice questions with auto-generated options, and export the final paper as a **PDF**. Designed to help teachers and students save time and effort in preparing question papers.
+
+---
+
+## 📖 About
+
+The **Question Paper Generator** is a Flask-based web application that leverages **Natural Language Processing (NLP)** and **OCR** to create exam-ready question papers automatically.
+
+It allows users to input text directly or upload an image (from which text is extracted using **Tesseract OCR**) and then generates:
+
+* **Subjective questions** with customizable marks distribution (2, 5, 10 marks)
+* **Objective questions (MCQs)** with automatically generated answer options
+
+The application also provides authentication features (register/login), organizes generated questions, and allows users to **download the paper as a PDF**.
 
 ---
 
@@ -25,7 +37,7 @@ It allows teachers, students, and examiners to generate **subjective and objecti
 
   * `nltk` (text processing & question generation)
   * `pytesseract` (OCR)
-  * `PIL` (image processing)
+  * `Pillow` (image processing)
   * `xhtml2pdf` (PDF export)
 
 ---
@@ -93,17 +105,19 @@ It allows teachers, students, and examiners to generate **subjective and objecti
 
 ---
 
-```
 ## 📂 Project Structure
+
+```
 📦 question-paper-generator
  ┣ 📜 app.py               # Flask app with routes
  ┣ 📜 subjective.py        # Subjective question generation logic
  ┣ 📜 objective.py         # Objective question generation logic
  ┣ 📂 templates/           # HTML templates (login, register, results, pdf, etc.)
  ┣ 📂 static/              # Static files (CSS, JS, images)
- ┣ 📂 uploads/             # Temp storage for uploaded images
  ┣ 📜 requirements.txt     # Dependencies
  ┗ 📜 README.md
+```
+
 ---
 
 ## 🤝 Contributing
@@ -124,6 +138,3 @@ This project is licensed under the **MIT License** – you’re free to use, mod
 * [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) for image-to-text
 * [Flask](https://flask.palletsprojects.com/) for the web framework
 * [xhtml2pdf](https://xhtml2pdf.readthedocs.io/) for PDF generation
-
----
-
