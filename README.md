@@ -93,19 +93,17 @@ It allows teachers, students, and examiners to generate **subjective and objecti
 
 ---
 
+```
 ## 📂 Project Structure
-
-```
 📦 question-paper-generator
- ┣ 📜 app.py              # Flask app with routes
- ┣ 📜 subjective.py       # Subjective question generation logic
- ┣ 📜 objective.py        # Objective question generation logic
- ┣ 📜 templates/          # HTML templates (login, register, results, etc.)
- ┣ 📜 uploads/            # Temp storage for uploaded images
- ┣ 📜 requirements.txt    # Dependencies
+ ┣ 📜 app.py               # Flask app with routes
+ ┣ 📜 subjective.py        # Subjective question generation logic
+ ┣ 📜 objective.py         # Objective question generation logic
+ ┣ 📂 templates/           # HTML templates (login, register, results, pdf, etc.)
+ ┣ 📂 static/              # Static files (CSS, JS, images)
+ ┣ 📂 uploads/             # Temp storage for uploaded images
+ ┣ 📜 requirements.txt     # Dependencies
  ┗ 📜 README.md
-```
-
 ---
 
 ## 🤝 Contributing
